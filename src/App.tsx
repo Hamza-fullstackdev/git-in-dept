@@ -19,7 +19,10 @@ function App() {
               Decrement
             </button>
             <span>{counter}</span>
-            <button className='bg-blue-500 text-sm text-white px-3 py-2 rounded-md'>
+            <button
+              onClick={() => setCounter((prev) => prev + 1)}
+              className='bg-blue-500 text-sm text-white px-3 py-2 rounded-md'
+            >
               Increment
             </button>
           </div>
