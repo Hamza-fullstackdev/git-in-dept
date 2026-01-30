@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 function App() {
+  const [counter, setCounter] = useState(0);
   return (
     <main className='py-10'>
       <section className='mx-auto w-full md:w-5xl border border-gray-100 rounded-md'>
@@ -15,7 +18,7 @@ function App() {
             <button className='bg-red-500 text-sm text-white px-3 py-2 rounded-md'>
               Decrement
             </button>
-            <span>1</span>
+            <span>{counter}</span>
             <button className='bg-blue-500 text-sm text-white px-3 py-2 rounded-md'>
               Increment
             </button>
