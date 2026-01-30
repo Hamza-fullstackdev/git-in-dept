@@ -15,7 +15,10 @@ function App() {
             </span>
           </div>
           <div className='mx-auto w-fit mt-6 flex items-center gap-4'>
-            <button className='bg-red-500 text-sm text-white px-3 py-2 rounded-md'>
+            <button
+              onClick={() => setCounter((prev) => (prev > 0 ? prev - 1 : prev))}
+              className='bg-red-500 text-sm text-white px-3 py-2 rounded-md'
+            >
               Decrement
             </button>
             <span>{counter}</span>
