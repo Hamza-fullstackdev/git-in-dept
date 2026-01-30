@@ -3,9 +3,6 @@ import { useState } from "react";
 function App() {
   const [counter, setCounter] = useState(0);
 
-  const handleDecrement = () => {
-    setCounter((prev) => (prev > 0 ? prev - 1 : prev));
-  };
   return (
     <main className='py-10'>
       <section className='mx-auto w-full md:w-5xl border border-gray-100 rounded-md'>
@@ -20,7 +17,7 @@ function App() {
           </div>
           <div className='mx-auto w-fit mt-6 flex items-center gap-4'>
             <button
-              onClick={handleDecrement}
+              onClick={() => setCounter((prev) => (prev > 0 ? prev - 1 : prev))}
               className='bg-red-500 text-sm text-white px-3 py-2 rounded-md'
             >
               Decrement
